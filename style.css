@@ -1,0 +1,842 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+
+}
+#cursor {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #e1e1e1;
+    position: absolute;
+    transition: all linear 0.3s;
+    z-index: 99999;
+    /* mix-blend-mode: difference; */
+    pointer-events: none;
+    padding: 10px 8px;
+    font-size: 6px;
+    color: black;
+}
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #a2a2a2;
+    /* background-image: url(https://media.istockphoto.com/id/625194092/photo/restaurant-chilling-out-classy-lifestyle-concept.jpg?s=612x612&w=0&k=20&c=K3aaFokPz0RwkEsvne-s46TFiq99vJoWJp7Ge5jAqT0=); */
+    /* background-image: url(https://media.istockphoto.com/id/184919893/photo/bellinis.jpg?s=612x612&w=0&k=20&c=tpRfZrNnGnzoWP2jIVz6c51c0ys4MPEqM97i4x-hK_8=); */
+    background-image: url(https://media.istockphoto.com/id/1421130309/photo/rose-wine-glasses-for-a-tasting-with-friends-close-up-view.jpg?s=612x612&w=0&k=20&c=pvBakPJCwKtG4CKTLsxt2vM6atldM0ideBPBnPGv-Bw=);
+    background-size: cover;
+    background-position: center;
+}
+#overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.422);
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+#nav {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid #fff;
+
+}
+
+#part1 {
+    display: flex;
+    width: 15%;
+    /* background-color: #5a36db; */
+    margin-left: 6%;
+    position: absolute;
+    justify-content: space-between;
+
+
+}
+
+#part2 {
+    display: flex;
+    position: absolute;
+    width: 15%;
+    /* background-color: #a31414; */
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 83%;
+
+}
+
+#part1 h1 {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    align-items: center;
+    cursor: pointer;
+}
+
+#part1 h2 {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#part2 h1 {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    align-items: center;
+    /* background-color: #9e1717; */
+    padding: 38px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    cursor: pointer;
+
+}
+
+#part2 i {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    align-items: center;
+    /* border-left: 1px solid white; */
+    cursor: pointer;
+}
+#logo img{
+    height: 250px;
+    position: absolute;
+   right: 0;
+   bottom: 0;
+}
+
+#overlay>h1{
+    font-size: 7vw;
+    font-family: "ivy";
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 70%;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 36%;
+    left: 15%;
+}
+#overlay>h2{
+    font-size: 2vw;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 70%;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 75%;
+    left: 15%;
+}
+
+#nav1 {
+    height: 10%;
+    width: 32%;
+    /* background-color: #c81212; */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 250px;
+    left: -130px;
+
+}
+
+#line {
+    width: 200px;
+    height: 1px;
+    background-color: #fff;
+}
+
+#nav1 i {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 10px 10px;
+}
+
+#nav1 h1 {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #fff;
+
+}
+#page2 {
+    height: 80vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    padding-top: 110px;
+
+}
+
+#page2 h2 {
+    font-family: "ivy";
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    color: rgb(250, 225, 38);
+}
+
+#page2 h1 {
+    font-family: "ivy";
+    font-size: 1.7vw;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    transition: all linear 0.3s;
+    line-height: 2.6vw;
+    z-index: 99;
+}
+
+#page2 #elem {
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+}
+
+#text {
+    /* background-color: #f9ff80; */
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+#page3 h6 {
+    font-size: 1.3vw;
+    color: rgb(255, 240, 131);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#page3 #elem {
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+#page3 h1 {
+    font-family: "ivy";
+    font-size: 6vw;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: white;
+    transition: all linear 0.3s;
+    line-height: 6.5vw;
+}
+
+#page3 p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3vw;
+    font-weight: 100;
+    color: white;
+    transition: all linear 0.3s;
+    width: 35%;
+}
+
+#page3 h5 {
+    font-size: 1.3vw;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#box1 {
+    height: 85%;
+    width: 45%;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    /* background-image: url(https://media.istockphoto.com/id/500674868/photo/food-and-drinks-establishment-with-a-traditional-modern-twist.webp?b=1&s=170667a&w=0&k=20&c=Sq8izfP5ntXppj3_NBsJOtT8qE-wxGL55TXkNKm380o=); */
+    background-image: url(https://media.istockphoto.com/id/1129343599/photo/stylish-bar-counter.jpg?s=612x612&w=0&k=20&c=NVPtFXlYagTI-qixnNYtLO7rcGQhMlIQWrDhSYBEIHs=);
+    background-position: center;
+    background-size: cover;
+    cursor: none;
+}
+
+#box2 {
+    height: 380px;
+    width: 380px;
+    background-color: #ff6767;
+    position: absolute;
+    left: 40%;
+    top: 72%;
+    z-index: 99;
+    border: 20px solid black;
+    background-image: url(https://images.unsplash.com/photo-1595212592138-369161d1ac88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVkJTIwcm9zZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: bottom;
+    background-size: cover;
+}
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+}
+
+#page4 h6 {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 1.3vw;
+    color: rgb(255, 240, 131);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#page4 #elem {
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+#elem-div {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+
+#page4 h1 {
+    font-family: "ivy";
+    font-size: 6vw;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: white;
+    transition: all linear 0.3s;
+    text-transform: uppercase;
+    line-height: 6.5vw;
+
+}
+
+#page4 span {
+    color: #000000;
+    font-size: 6vw;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+#page4 p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5vw;
+    font-weight: 100;
+    color: white;
+    transition: all linear 0.3s;
+    position: absolute;
+    top: 80%;
+    left: 57%;
+}
+
+#page5 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+}
+
+#box {
+    height: 86%;
+    width: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    cursor: none;
+    background-image: url(https://media.istockphoto.com/id/1296510848/photo/3d-render-of-cafe-restaurant-interior.jpg?s=612x612&w=0&k=20&c=nqUaVFWGz5TYFpome1sGMltPwq0IhEdTwm1t9J3IKn4=
+);
+    background-position: center;
+    background-size: cover;
+}
+
+#para {
+    position: absolute;
+    left: 65%;
+    top: 40%;
+
+}
+
+#page5 h6 {
+    font-size: 1.3vw;
+    color: rgb(255, 240, 131);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#page5 h2 {
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    font-family: "ivy";
+}
+
+#page5 p {
+    font-size: 1.2vw;
+    color: rgb(255, 255, 255);
+    font-weight: 00;
+    width: 65%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+
+#page5 h5 {
+    font-size: 1.3vw;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#page6 {
+    height: 200vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+}
+
+#page6 h6 {
+    position: absolute;
+    top: 40%;
+    left: 38%;
+    font-size: 1.3vw;
+    color: rgb(255, 240, 131);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#page6 h1 {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    font-size: 5.5vw;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family: "ivy";
+    z-index: 999;
+}
+
+#box3 {
+    height: 280px;
+    width: 340px;
+    background-color: #fff;
+    position: absolute;
+    left: 7%;
+    top: 30%;
+    background-image: url(https://media.istockphoto.com/id/593333444/photo/people-holding-glasses-of-champagne-making-a-toast.jpg?s=612x612&w=0&k=20&c=mXbe2B8lCVFF13yxgdAee-GaN7Z_yeZXM5DK8YroUPw=);
+    /* background-image: url(https://media.istockphoto.com/id/1172338110/photo/group-of-eastern-hookahs-with-black-pipes-on-table-in-cafe-shisha-smoking-concept.jpg?s=612x612&w=0&k=20&c=PuvVm0S718plLT-lk8AOCt1oQShcIBx0By4rylL_Q8w=); */
+    background-position: center;
+    background-size: cover;
+}
+
+#box4 {
+    height: 590px;
+    width: 480px;
+    background-color: #fff;
+    position: absolute;
+    left: 60%;
+    top: 20%;
+    background-image: url(https://media.istockphoto.com/id/597258076/photo/best-friends.jpg?s=612x612&w=0&k=20&c=yIm4DOVmwatB3jTq35phluKe6DfhnLS0n7hSuWMOhW8=);
+    background-size: cover;
+    background-position: left;
+}
+
+#box5 {
+    height: 300px;
+    width: 350px;
+    background-color: #fff;
+    position: absolute;
+    left: 26%;
+    top: 65%;
+    background-image: url(https://media.istockphoto.com/id/1168737156/photo/beer-bottle.jpg?s=612x612&w=0&k=20&c=zYoyFEdPBSFjIPNwwUD2UZrCbUUNQrZ8wCS23oKbOsA=);
+    background-position: center;
+    background-size: cover;
+}
+
+#page6 p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5vw;
+    font-weight: 100;
+    color: white;
+    transition: all linear 0.3s;
+    position: absolute;
+    top: 72%;
+    left: 60%;
+    /* background-color: #ff7c7c; */
+    border-top: 1px solid rgb(255, 240, 131);
+    padding-top: 30px;
+    width: 33%;
+}
+
+#page6 h5 {
+    position: absolute;
+    top: 84%;
+    left: 60.5%;
+    font-size: 1.3vw;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#page8 {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    position: relative;
+    color: white;
+
+}
+
+#page8 h1 {
+    font-size: 5vw;
+    font-family: "ivy";
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 5%;
+    position: absolute;
+    top: 30px;
+    left: 28%;
+    z-index: 999;
+    /* background-color: #ff8282; */
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(255, 240, 131);
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.swiper-slide p {
+    margin-top: 10%;
+    font-size: 2.3vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 60%;
+}
+
+.swiper-slide h5 {
+    font-size: 1.5vw;
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+
+}
+
+.swiper-slide h5 span {
+    font-size: 1vw;
+    margin-top: 100px;
+    text-transform: lowercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+
+}
+.swiper-slide h5 img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 38%;
+    top: 67%;
+    
+
+}
+#page9 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+
+}
+
+#big-box {
+    height: 73%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 15%;
+    display: flex;
+}
+
+#col1 {
+    height: 100%;
+    width: 18%;
+    background-color: #fa7171;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub1 {
+    height: 50%;
+    width: 100%;
+    background-color: #edca02;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://media.istockphoto.com/id/1333811879/photo/champagne-filled-glass-on-gold-table-cloth-at-wedding-reception.jpg?s=612x612&w=0&k=20&c=y8fDbFj2TUS62AR2rGfnknyI_TIo-F0jM4nBR0s_hHo=);
+}
+
+#sub2 {
+    height: 50%;
+    width: 100%;
+    background-color: #127abe;
+    background-image: url(https://images.unsplash.com/photo-1436018626274-89acd1d6ec9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyJTIwcmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+}
+
+#col2 {
+    height: 100%;
+    width: 18%;
+    background-color: #39c51d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub3 {
+    height: 50%;
+    width: 100%;
+    background-color: #0b2c8752;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1602876153306-9a59170d9d8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+    
+}
+
+#sub4 {
+    height: 50%;
+    width: 100%;
+    background-color: #ff9d9d;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://media.istockphoto.com/id/1290237592/photo/empty-restaurant-interior.webp?b=1&s=170667a&w=0&k=20&c=S4Fw0qbpUDjiO59u5HPnptVGIiv6q0b5e0HbBsv7FOI=);
+    
+}
+
+#col3 {
+    height: 100%;
+    width: 28%;
+    background-color: #ffffff;
+    padding-top: 10%;
+    text-align: center;
+}
+
+#col3 h6 {
+    font-size: 1.3vw;
+    color: rgb(255, 174, 0);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 5%;
+}
+
+#col3 h2 {
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    font-family: "ivy";
+    margin-bottom: 15%;
+
+}
+
+#col3 h5 {
+    font-size: 1.1vw;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#col3 i:hover {
+    background-color: rgb(255, 174, 0);
+    color: white;
+}
+
+#col3 i {
+    font-size: 1vw;
+    border: 1px solid rgb(255, 174, 0);
+    border-radius: 50%;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    transition: all linear 0.2s;
+    cursor: pointer;
+
+}
+
+#col4 {
+    height: 100%;
+    width: 18%;
+    background-color: #c2d213;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub5 {
+    height: 50%;
+    width: 100%;
+    background-color: #cb54db;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1660120447916-123439b05c40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGJhciUyMHJlc3RhdXJhbnQlMjBpbnRlcmlvcnxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
+
+}
+
+#sub6 {
+    height: 50%;
+    width: 100%;
+    background-color: #9eef25;
+    background-position: center;
+    background-size: cover;
+    /* background-image: url(https://media.istockphoto.com/id/1040303026/photo/draught-beer-in-glasses.webp?b=1&s=170667a&w=0&k=20&c=3Isycuf8OoXxTXHsbVixgrbL0InOQ-o7iR2Y08jMe1Y=); */
+    background-image: url(https://media.istockphoto.com/id/667442560/photo/restaurant-chilling-out-classy-lifestyle-reserved-concept.webp?b=1&s=170667a&w=0&k=20&c=cHSVSbQOs2RYWN_inIkhgw8CTec8JcoECKegbu-PVb0=);
+}
+
+#col5 {
+    height: 100%;
+    width: 18%;
+    background-color: #5634be;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub7 {
+    height: 50%;
+    width: 100%;
+    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1671116810331-894618e447b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60);
+
+}
+
+#sub8 {
+    height: 50%;
+    width: 100%;
+    background-color: #ff9d9d;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHJlc3RyYXVudCUyMGZvb2R8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60);
+}
+
+#page10 {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #000000; */
+    /* background-image: url(https://media.istockphoto.com/id/624494724/photo/empty-wooden-bar-counter.webp?b=1&s=170667a&w=0&k=20&c=5kGyDMVf15_MCSNXZMX2Vs41rMmgEQhKYtn-d5Qqj74=); */
+    background-image: url(https://media.istockphoto.com/id/1130714046/photo/empty-dark-wooden-table-in-front-of-abstract-blurred-bokeh-background-of-restaurant-can-be.webp?b=1&s=170667a&w=0&k=20&c=81AFO47LmBWjAa8643R4JO4bFyBRPAkYlH23Cc6t3Cw=);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#overlay-div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #00000080;
+    text-align: center;
+    font-size: 1.5vw;
+    color: white;
+    padding-top: 50px;
+
+}
+
+#overlay-div h1 {
+    font-size: 5vw;
+    font-weight: 200;
+}
+
+#overlay-div h3 {
+    font-size: 2.5vw;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
